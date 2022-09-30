@@ -17,7 +17,6 @@ class MyUser {
     this.age = 20,
     this.solved10SecPractice = 0,
     this.solved15SecPractice = 0,
-    
   });
 
   factory MyUser.fromJson(Map<String, dynamic>? json) => _$MyUserFromJson(json);
@@ -27,24 +26,18 @@ class MyUser {
 @JsonSerializable()
 class Practice {
   final int type;
-  final int answer;
-  final int numberOfLines;
   final List<String> quiz;
   final int quizAnswer;
   final String practiceId;
   final String practiceUrl;
   final List<String> solvedBy;
   Practice(
-      {
-        required this.type,
-      required this.answer,
-      required this.numberOfLines,
+      {required this.type,
       required this.quiz,
       required this.quizAnswer,
       this.practiceId = '',
       required this.practiceUrl,
-      required this.solvedBy
-      });
+      required this.solvedBy});
 
   factory Practice.fromJson(Map<String, dynamic>? json) =>
       _$PracticeFromJson(json);

@@ -127,8 +127,6 @@ class FirestoreService {
     ref = _db.collection('Practice');
     var snapshot = await ref!
         .add(Practice(
-      answer: answer,
-      numberOfLines: numcerOfLines,
       practiceUrl: practiceUrl,
       quiz: quiz,
       quizAnswer: quizAnswer,

@@ -24,8 +24,7 @@ Map<String, dynamic>? _$MyUserToJson(MyUser instance) => <String, dynamic>{
 
 Practice _$PracticeFromJson(Map<String, dynamic>? json) => Practice(
       type: json!['type'] as int,
-      answer: json['answer'] as int,
-      numberOfLines: json['numberOfLines'] as int,
+     
       quizAnswer: json['quizAnswer'] as int,
       practiceId: json['practiceId'] as String,
       practiceUrl: json['practiceUrl'] as String,
@@ -37,8 +36,7 @@ Practice _$PracticeFromJson(Map<String, dynamic>? json) => Practice(
 
 Map<String, dynamic>? _$PracticeToJson(Practice instance) => <String, dynamic>{
       'type': instance.type,
-      'answer': instance.answer,
-      'numcerOfLines': instance.numberOfLines,
+
       'quiz': instance.quiz,
       'quizAnswer': instance.quizAnswer,
       'practiceId': instance.practiceId,
