@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "690195582319",
+    "project_id": "gammal-tech-practice",
+    "storage_bucket": "gammal-tech-practice.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690195582319:android:605e1c0039cfed20546c9a",
+        "android_client_info": {
+          "package_name": "com.example.gammal_tech_practice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690195582319-bh2ajqss8oae3773fqoqaeev2vsh7nqp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATMwPH6fpGZwBadnNkcBTBn1ZF4XVlQBw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "690195582319-bh2ajqss8oae3773fqoqaeev2vsh7nqp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
