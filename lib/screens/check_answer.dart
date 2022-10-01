@@ -27,8 +27,7 @@ class CheckAnswer extends StatelessWidget {
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
-              icon:  Image.asset(
-                'assets/gammal tech.png',),
+              icon: Icon(Icons.home),
               onPressed: () {
                 Navigator.of(context)
                     .pushReplacementNamed('/home')
@@ -44,8 +43,8 @@ class CheckAnswer extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            icon: Icon(
-              Icons.settings,
+            icon: Image.asset(
+              'assets/gammal tech.png',
             ),
             onPressed: () {
               Navigator.push(context,

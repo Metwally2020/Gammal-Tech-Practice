@@ -63,7 +63,7 @@ class _AboutScreenState extends State<AboutScreen> {
                     ),
                   )
                 : Padding(
-                    padding: const EdgeInsets.only(right: 12.0),
+                    padding: const EdgeInsets.only(right: 12.0,top: 3),
                     child: TextButton(
                       onPressed: () {
                         lang = 'en';
@@ -86,9 +86,7 @@ class _AboutScreenState extends State<AboutScreen> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(
-                  height: 10,
-                ),
+               
                 
                 Text(
                   'Gammal Tech \nFinal Exam Practice',
