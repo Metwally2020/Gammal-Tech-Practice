@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyATMwPH6fpGZwBadnNkcBTBn1ZF4XVlQBw',
-    appId: '1:690195582319:android:605e1c0039cfed20546c9a',
+    appId: '1:690195582319:android:ef74e2014333334e546c9a',
     messagingSenderId: '690195582319',
     projectId: 'gammal-tech-practice',
     storageBucket: 'gammal-tech-practice.appspot.com',
@@ -59,11 +59,11 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyCfur3LSnulrsXAbMf2DpRSsaByp8ikmk8',
-    appId: '1:690195582319:ios:651a40d6406a9300546c9a',
+    appId: '1:690195582319:ios:ea9de340a39cfabb546c9a',
     messagingSenderId: '690195582319',
     projectId: 'gammal-tech-practice',
     storageBucket: 'gammal-tech-practice.appspot.com',
-    iosClientId: '690195582319-ell8040s75uicl44c3rvc3eq4vmc3j10.apps.googleusercontent.com',
-    iosBundleId: 'com.example.gammalTechPractice',
+    iosClientId: '690195582319-oguf1eo668skchr6tu7f5lcbtt3aiab0.apps.googleusercontent.com',
+    iosBundleId: 'tech.gammal.traceme',
   );
 }

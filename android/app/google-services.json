@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:690195582319:android:605e1c0039cfed20546c9a",
+        "mobilesdk_app_id": "1:690195582319:android:ef74e2014333334e546c9a",
         "android_client_info": {
-          "package_name": "com.example.gammal_tech_practice"
+          "package_name": "tech.gammal.traceme"
         }
       },
       "oauth_client": [
@@ -29,6 +29,13 @@
             {
               "client_id": "690195582319-bh2ajqss8oae3773fqoqaeev2vsh7nqp.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "690195582319-ell8040s75uicl44c3rvc3eq4vmc3j10.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.gammalTechPractice"
+              }
             }
           ]
         }
