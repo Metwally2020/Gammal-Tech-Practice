@@ -4,7 +4,7 @@ A new Flutter project.
 
 ## Getting Started
 
-www.gammal.tech is the best online website that teachs programming in Arabic, and after each student finishes his learnig jeorny, he can take the final exam of Gammal Tech in witch he would have to solve various problems, the first two stages of the exam will test you at the syntax of the C and C++ programming language, So this app was created to help you practice before taking the exam 😉.
+www.gammal.tech is the best online website that teaches programming in Arabic, and after each student finishes his learning journey, he can take the final exam of Gammal Tech in witch he would have to solve various problems, the first two stages of the exam will test you at the syntax of the C and C++ programming language, So this app was created to help you practice before taking the exam 😉.
 
 the first stage of the application allows you to take challenges on syntax errors in C and C++ programming languages.
 There are two types of challenges 
@@ -15,6 +15,11 @@ Try it out now !
 
 
    <img src=  "https://user-images.githubusercontent.com/68192149/193427539-2884f151-6997-41d2-9255-9aafe254f86b.jpg" width="220" height="400" />    <img src=  "https://user-images.githubusercontent.com/68192149/193427541-112d951f-0fbf-4037-be65-33661af17fd6.jpg" width="220" height="400" />    <img src=  "https://user-images.githubusercontent.com/68192149/193427546-12e7999f-e30e-4cb7-9710-ffe0dd12ca2d.jpg" width="220" height="400" />     <img src=  "https://user-images.githubusercontent.com/68192149/193427550-cb634f9f-1af2-4f20-88e2-e97093c7a95f.jpg" width="220" height="400" />    <img src=  "https://user-images.githubusercontent.com/68192149/193427558-d4aead98-8c6b-425d-9086-dc115526a52d.jpg" width="220" height="400" />    <img src=  "https://user-images.githubusercontent.com/68192149/193427561-3da45b9f-f05e-473f-ad83-d688287478fd.jpg" width="220" height="400" />     <img src=  "https://user-images.githubusercontent.com/68192149/193427565-ebe5821e-f5fb-426e-aee5-57af154d7525.jpg" width="220" height="400" />     <img src=  "https://user-images.githubusercontent.com/68192149/193429334-bb19f93e-e6de-4fcc-bab8-c33a86f36d3a.jpg" width="220" height="400" />
+ 
+ 
+ <h3>Gammal Tech Final Exam</h3>
+ <br>
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/iCTEYPwvhCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  
 <!--  <img src=  "https://user-images.githubusercontent.com/68192149/193427539-2884f151-6997-41d2-9255-9aafe254f86b.jpg" width="200" height="400" />
  <img src=  "https://user-images.githubusercontent.com/68192149/193427541-112d951f-0fbf-4037-be65-33661af17fd6.jpg" width="200" height="400" />
