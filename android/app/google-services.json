@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:690195582319:android:ef74e2014333334e546c9a",
+        "mobilesdk_app_id": "1:690195582319:android:f530e07c1f75f0af546c9a",
         "android_client_info": {
-          "package_name": "tech.gammal.traceme"
+          "package_name": "tech.gammal.gtpractice"
         }
       },
       "oauth_client": [
