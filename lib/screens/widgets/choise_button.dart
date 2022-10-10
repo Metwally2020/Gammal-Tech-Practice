@@ -1,15 +1,7 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart' hide BoxShadow, BoxDecoration;
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:gammal_tech_practice/services/data_models.dart';
-
-import '../../services/auth.dart';
-import '../check_answer.dart';
-import '../practice.dart';
-import 'quiz_button.dart';
 import 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
 
+// ignore: must_be_immutable
 class ChoiceButton extends StatelessWidget {
   void Function()? onTap;
 

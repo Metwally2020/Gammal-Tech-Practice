@@ -52,6 +52,7 @@ dependencies:
   json_annotation: ^4.6.0
   rename: ^2.0.1
   shared_preferences: ^2.0.15
+  flutter_native_splash: ^2.2.11
 #   flutter_advanced_networkimage_2: ^2.0.1
 # dependency_overrides:
 #   flutter_svg: ^0.18.0
@@ -77,7 +78,16 @@ flutter_icons:
   image_path_android: "assets/appIcon.png"
   image_path_ios: "assets/iosappicon.png"
   image_path: "assets/appIcon.png"
-  min_sdk_android: 21 # android min sdk min:16, default 21
+  min_sdk_android: 21
+
+flutter_native_splash:
+  color: "#f5f5f5"
+  image: assets/appIcon.png
+  android: true
+  ios: true
+  android_gravity: center
+
+  # android min sdk min:16, default 21
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter packages.

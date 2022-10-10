@@ -1,13 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:gammal_tech_practice/services/data_models.dart';
 import 'package:gammal_tech_practice/services/firestore.dart';
 
 import '../../services/auth.dart';
 import '../check_answer.dart';
 
+// ignore: must_be_immutable
 class QuizButton extends StatelessWidget {
   Practice myPractice;
   int index;
@@ -23,7 +22,7 @@ class QuizButton extends StatelessWidget {
     required this.myPractice,
   });
 
-  User? currentUser = AuthService().Currerntuser;
+  User? currentUser = AuthService().currerntuser;
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +40,7 @@ class QuizButton extends StatelessWidget {
                               practiceNum: practiceNum,
                               maxPracticeNum: maxPracticeNum,
                               type: myPractice.type,
+                            // ignore: argument_type_not_assignable_to_error_handler
                             ))).then((value) => null).catchError((){}),
               }
             : {
@@ -52,6 +52,7 @@ class QuizButton extends StatelessWidget {
                               practiceNum: practiceNum,
                               maxPracticeNum: maxPracticeNum,
                               type: myPractice.type,
+                            // ignore: argument_type_not_assignable_to_error_handler
                             ))).then((value) => null).catchError((){}),
               };
       },

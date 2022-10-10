@@ -1,11 +1,7 @@
 import 'dart:async';
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:rxdart/rxdart.dart';
 import 'auth.dart';
 import 'data_models.dart';
 
@@ -13,7 +9,7 @@ class FirestoreService {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
   String? path;
   CollectionReference? ref;
-  var currentUser = AuthService().Currerntuser;
+  var currentUser = AuthService().currerntuser;
 
   // Stream<MyUser> streamUser() {
   //   return AuthService().userStram.switchMap((user) {
@@ -28,7 +24,7 @@ class FirestoreService {
 
   addUser({required userId, context}) async {
     ref = _db.collection('users');
-    var snapshot = await ref!
+    await ref!
         .doc(userId)
         .set(MyUser(
           uid: userId,
@@ -62,10 +58,11 @@ class FirestoreService {
     required List practicesIds,
     required uid,
   }) async {
-    for (int i = 0; i < practicesIds.length; i++)
+    for (int i = 0; i < practicesIds.length; i++) {
       _db.collection('practices').doc(practicesIds[i]).update({
         'solvedBy': FieldValue.arrayRemove([uid])
       });
+    }
   }
 
 //  Future<void> (
@@ -125,7 +122,7 @@ class FirestoreService {
     context,
   }) async {
     ref = _db.collection('Practice');
-    var snapshot = await ref!
+    await ref!
         .add(Practice(
       practiceUrl: practiceUrl,
       quiz: quiz,
@@ -135,9 +132,8 @@ class FirestoreService {
     ).toJson())
         .then((value) {
       final addingExerxiseId = _db.collection('practices').doc(value.id);
-      addingExerxiseId.update({'practiceId': value.id}).then(
-          (value) => print("DocumentSnapshot successfully updated!"),
-          onError: (e) => print("Error updating document $e"));
+      addingExerxiseId.update({'practiceId': value.id}).then((value) => () {},
+          onError: (e) => () {});
     }).catchError((error) {
       AwesomeDialog(
           showCloseIcon: true,

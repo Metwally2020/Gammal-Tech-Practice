@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:gammal_tech_practice/screens/reload_practice.dart';
 
 import '../shared/widgets/loader.dart';
 import 'about.dart';
 import 'load_the_practice.dart';
-import 'practice.dart';
 
+// ignore: must_be_immutable
 class CheckAnswer extends StatelessWidget {
   CheckAnswer(
       {super.key,
@@ -32,6 +30,7 @@ class CheckAnswer extends StatelessWidget {
                 Navigator.of(context)
                     .pushReplacementNamed('/home')
                     .then((value) => null)
+                    // ignore: argument_type_not_assignable_to_error_handler
                     .catchError(() {});
               },
               tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
@@ -50,6 +49,7 @@ class CheckAnswer extends StatelessWidget {
               Navigator.push(context,
                       MaterialPageRoute(builder: (context) => AboutScreen()))
                   .then((value) => null)
+                  // ignore: argument_type_not_assignable_to_error_handler
                   .catchError(() {});
             },
           )
@@ -87,7 +87,6 @@ class CheckAnswer extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  print(practiceNum);
                   practiceNum < maxPracticeNum - 1
                       ? check == false
                           ? Navigator.push(
@@ -98,6 +97,7 @@ class CheckAnswer extends StatelessWidget {
                                             practiceNum: practiceNum + 1,
                                           )))
                               .then((value) => null)
+                              // ignore: argument_type_not_assignable_to_error_handler
                               .catchError(() {})
                           : Navigator.push(
                                   context,
@@ -107,6 +107,7 @@ class CheckAnswer extends StatelessWidget {
                                             practiceNum: practiceNum,
                                           )))
                               .then((value) => null)
+                              // ignore: argument_type_not_assignable_to_error_handler
                               .catchError(() {})
                       : check == false
                           ? Navigator.push(
@@ -117,6 +118,7 @@ class CheckAnswer extends StatelessWidget {
                                             practiceNum: practiceNum,
                                           )))
                               .then((value) => null)
+                              // ignore: argument_type_not_assignable_to_error_handler
                               .catchError(() {})
                           : maxPracticeNum == 0
                               ? Navigator.push(
@@ -126,6 +128,7 @@ class CheckAnswer extends StatelessWidget {
                                                 type: type,
                                               )))
                                   .then((value) => null)
+                                  // ignore: argument_type_not_assignable_to_error_handler
                                   .catchError(() {})
                               : Navigator.push(
                                       context,
@@ -135,6 +138,7 @@ class CheckAnswer extends StatelessWidget {
                                                 practiceNum: 0,
                                               )))
                                   .then((value) => null)
+                                  // ignore: argument_type_not_assignable_to_error_handler
                                   .catchError(() {});
                 },
                 child: Container(
@@ -172,6 +176,7 @@ class CheckAnswer extends StatelessWidget {
                                               practiceNum: practiceNum,
                                             )))
                                 .then((value) => null)
+                                // ignore: argument_type_not_assignable_to_error_handler
                                 .catchError(() {})
                             : Navigator.push(
                                     context,
@@ -180,6 +185,7 @@ class CheckAnswer extends StatelessWidget {
                                               type: type,
                                             )))
                                 .then((value) => null)
+                                // ignore: argument_type_not_assignable_to_error_handler
                                 .catchError(() {});
                       },
                       child: Container(

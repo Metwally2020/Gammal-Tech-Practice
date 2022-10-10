@@ -1,18 +1,17 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:gammal_tech_practice/services/firestore.dart';
 
 import '../services/auth.dart';
 import '../services/data_models.dart';
 import '../shared/widgets/loader.dart';
 
+// ignore: must_be_immutable
 class ReloadPractice extends StatelessWidget {
   ReloadPractice({super.key, required this.type});
   int type;
   List<String> myPracticesIds = [];
-  User? currentUser = AuthService().Currerntuser;
+  User? currentUser = AuthService().currerntuser;
 
   @override
   Widget build(BuildContext context) {

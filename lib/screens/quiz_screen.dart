@@ -1,21 +1,8 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:gammal_tech_practice/screens/practice.dart';
-import 'package:gammal_tech_practice/screens/reload_practice.dart';
-import 'dart:io';
-import 'package:http/http.dart' as http;
-import 'package:path/path.dart';
-import 'package:path_provider/path_provider.dart';
-
-import '../services/auth.dart';
 import '../services/data_models.dart';
-import '../services/firestore.dart';
-import '../shared/widgets/loader.dart';
-import 'about.dart';
 import 'widgets/quiz_button.dart';
 
+// ignore: must_be_immutable
 class QuizScreen extends StatelessWidget {
   QuizScreen(
       {super.key,

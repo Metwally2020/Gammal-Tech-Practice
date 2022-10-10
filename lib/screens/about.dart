@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:gammal_tech_practice/screens/my_web_view.dart';
+// ignore: depend_on_referenced_packages
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+
+import 'package:gammal_tech_practice/screens/my_web_view.dart';
 
 class AboutScreen extends StatefulWidget {
   const AboutScreen({super.key});
@@ -28,7 +28,6 @@ class _AboutScreenState extends State<AboutScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     const url = 'https://youtu.be/iCTEYPwvhCQ';
     youTubeController = YoutubePlayerController(
         initialVideoId: YoutubePlayer.convertUrlToId(url)!,

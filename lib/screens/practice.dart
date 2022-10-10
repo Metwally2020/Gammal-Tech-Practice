@@ -3,21 +3,18 @@ import 'dart:async';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 import 'package:gammal_tech_practice/screens/widgets/choise_button.dart';
 import 'package:gammal_tech_practice/services/auth.dart';
 import 'package:gammal_tech_practice/services/data_models.dart';
 
-import '../services/firestore.dart';
 import '../shared/widgets/loader.dart';
 import 'about.dart';
 import 'check_answer.dart';
 import 'quiz_screen.dart';
-import 'reload_practice.dart';
-import 'widgets/quiz_button.dart';
 
+
+// ignore: must_be_immutable
 class CountdownWidget extends StatefulWidget {
   final int practiceNum;
   final int maxPracticeNum;
@@ -48,10 +45,11 @@ class _CountdownWidgetState extends State<CountdownWidget> {
     timer = Timer.periodic(Duration(seconds: 1), (_) {
       if (stopMyTimer == false) {
         if (countdown > 0) {
-          if (this.mounted)
+          if (mounted) {
             setState(() {
               countdown--;
             });
+          }
         } else {
           stopTimer();
           Navigator.pushReplacement(
@@ -64,6 +62,7 @@ class _CountdownWidgetState extends State<CountdownWidget> {
                 type: widget.myPracticeType,
               ),
             ),
+          // ignore: argument_type_not_assignable_to_error_handler
           ).then((value) => null).catchError(() {});
         }
       } else {
@@ -114,7 +113,7 @@ class PracticeScreen extends StatefulWidget {
 class _PracticeScreenState extends State<PracticeScreen> {
   var scaffoldKey = GlobalKey<ScaffoldState>();
 
-  User? currentUser = AuthService().Currerntuser;
+  User? currentUser = AuthService().currerntuser;
 
   @override
   void initState() {
@@ -170,6 +169,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
                                 MaterialPageRoute(
                                     builder: (context) => AboutScreen()))
                             .then((value) => null)
+                            // ignore: argument_type_not_assignable_to_error_handler
                             .catchError(() {});
                       },
                     )
@@ -217,6 +217,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
                                       type: widget.myPracticeType,
                                       myPractice: widget.myPractice,
                                     ),
+                                  // ignore: argument_type_not_assignable_to_error_handler
                                   )).then((value) => null).catchError(() {});
                             },
                           )

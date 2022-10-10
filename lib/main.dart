@@ -1,14 +1,10 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:gammal_tech_practice/screens/home.dart';
-import 'package:gammal_tech_practice/screens/start.dart';
 import 'package:flutter/services.dart';
 import 'package:gammal_tech_practice/services/auth.dart';
-
 import 'firebase_options.dart';
-import 'screens/practice.dart';
-
+import 'onboarding/onboarding_screen.dart';
 bool isLogidIn = false;
 
 Future<void> main() async {
@@ -16,7 +12,7 @@ Future<void> main() async {
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
-  var user = AuthService().Currerntuser;
+  var user = AuthService().currerntuser;
   user == null ? isLogidIn = false : isLogidIn = true;
   runApp(const MyApp());
 }
@@ -40,6 +36,6 @@ class MyApp extends StatelessWidget {
         ),
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
-        home: isLogidIn == false ? Start() : HomeScreen());
+        home: isLogidIn == false ? OnboardingScreen() : OnboardingScreen());
   }
 }

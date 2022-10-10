@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
+// ignore: depend_on_referenced_packages
 import 'package:webview_flutter/webview_flutter.dart';
 import 'dart:io';
 
@@ -25,11 +25,11 @@ class _MyWebViewState extends State<MyWebView> {
     return Scaffold(
         floatingActionButton: FloatingActionButton(
           onPressed: () => Navigator.pop(context),
+          backgroundColor: Colors.teal,
           child: Icon(
             Icons.arrow_back,
             color: Colors.white,
           ),
-          backgroundColor: Colors.teal,
         ),
       
         body: SafeArea(

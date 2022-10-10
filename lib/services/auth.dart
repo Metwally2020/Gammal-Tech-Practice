@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'firestore.dart';
 
 class AuthService {
-  final FirebaseFirestore _db = FirebaseFirestore.instance;
-  User? Currerntuser = FirebaseAuth.instance.currentUser;
+  User? currerntuser = FirebaseAuth.instance.currentUser;
 
   Future<void> anonLogin({context}) async {
     try {
-      final userCredential = await FirebaseAuth.instance.signInAnonymously().
+      await FirebaseAuth.instance.signInAnonymously().
       then((value) {
         FirestoreService().addUser(userId: value.user!.uid);
         return Navigator.of(context).pushReplacementNamed('/home');

@@ -1,23 +1,16 @@
-import 'dart:async';
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:gammal_tech_practice/screens/practice.dart';
-import 'package:gammal_tech_practice/screens/widgets/choise_button.dart';
 import 'package:gammal_tech_practice/services/auth.dart';
 import 'package:gammal_tech_practice/services/data_models.dart';
 
 import '../services/firestore.dart';
 import '../shared/widgets/loader.dart';
 import 'about.dart';
-import 'check_answer.dart';
-import 'quiz_screen.dart';
 import 'reload_practice.dart';
-import 'widgets/quiz_button.dart';
 
+// ignore: must_be_immutable
 class LoadThePractice extends StatefulWidget {
   LoadThePractice({super.key, required this.type, required this.practiceNum});
 
@@ -30,7 +23,7 @@ class LoadThePractice extends StatefulWidget {
 }
 
 class _LoadThePracticeState extends State<LoadThePractice> {
-  User? currentUser = AuthService().Currerntuser;
+  User? currentUser = AuthService().currerntuser;
 
   List<Practice> myPractices = [];
 
@@ -45,8 +38,8 @@ class _LoadThePracticeState extends State<LoadThePractice> {
     practiceImage = CachedNetworkImage(
       imageUrl: url,
       errorWidget: (context, url, error) => LoadingScreen(),
-      progressIndicatorBuilder: (BuildContext, String, DownloadProgress) {
-        if (DownloadProgress.downloaded == 1) {
+      progressIndicatorBuilder: (context, url, isDounlad) {
+        if (isDounlad.downloaded == 1) {
           setState(() {
             isLoading = false;
           });
@@ -80,7 +73,7 @@ class _LoadThePracticeState extends State<LoadThePractice> {
               myPractices.add(prac);
             }
           }
-          if (myPractices.length == 0) {
+          if (myPractices.isEmpty) {
             return Scaffold(
               appBar: AppBar(),
               body: Center(
@@ -91,6 +84,7 @@ class _LoadThePracticeState extends State<LoadThePractice> {
                         MaterialPageRoute(
                             builder: (context) => ReloadPractice(
                                   type: widget.type,
+                                // ignore: argument_type_not_assignable_to_error_handler
                                 ))).then((value) => null).catchError(() {});
                   },
                   child: Container(
@@ -160,6 +154,7 @@ class _LoadThePracticeState extends State<LoadThePractice> {
                                 practiceImage: practiceImage,
                               ),
                             ),
+                          // ignore: argument_type_not_assignable_to_error_handler
                           ).then((value) => null).catchError(() {});
                         },
                         child: Container(
