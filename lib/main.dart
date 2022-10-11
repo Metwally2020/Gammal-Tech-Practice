@@ -36,6 +36,6 @@ class MyApp extends StatelessWidget {
         ),
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
-        home: isLogidIn == false ? OnboardingScreen() : OnboardingScreen());
+        home: isLogidIn == false ? OnboardingScreen() : HomeScreen());
   }
 }
