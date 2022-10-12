@@ -11,17 +11,6 @@ class FirestoreService {
   CollectionReference? ref;
   var currentUser = AuthService().currerntuser;
 
-  // Stream<MyUser> streamUser() {
-  //   return AuthService().userStram.switchMap((user) {
-  //     if (user != null) {
-  //       var ref = _db.collection('users').doc(user.uid);
-  //       return ref.snapshots().map((doc) => MyUser.fromJson(doc.data()!));
-  //     } else {
-  //       return Stream.fromIterable([MyUser()]);
-  //     }
-  //   });
-  // }
-
   addUser({required userId, context}) async {
     ref = _db.collection('users');
     await ref!
@@ -65,23 +54,6 @@ class FirestoreService {
     }
   }
 
-//  Future<void> (
-//       {required uid, required Practice practice}) async {
-//     _db.collection('practices').get..
-//     .update({
-//       'solvedBy':
-//            FieldValue.arrayUnion([uid])
-
-//     });
-//   }
-
-  //   Future<List<MyUser>> getUser(userId) async {
-  //   ref = _db.collection('users');
-  //   var snapshot = await ref!.get();
-  //   var data = snapshot.docs.map((e) => e.data());
-  //   var users = data.map((d) => MyUser.fromJson(d as Map<String, dynamic>));
-  //   return users.toList();
-  // }
 
   Future<MyUser> getSingleUser({uid}) async {
     var docRef = _db.collection('lesson').doc(uid);
@@ -99,17 +71,6 @@ class FirestoreService {
         data.map((d) => Practice.fromJson(d as Map<String, dynamic>));
     return practices.toList();
   }
-
-  // Stream<Post> userPosts() {
-  //   return AuthService().userStram.switchMap((user) {
-  //     if (user != null) {
-  //       var ref = _db.collection('posts').doc(user.uid);
-  //       return ref.snapshots().map((doc) => Post.fromJson(doc.data()!));
-  //     } else {
-  //       return Stream.fromIterable([Post()]);
-  //     }
-  //   });
-  // }
 
   addPractice({
     required type,

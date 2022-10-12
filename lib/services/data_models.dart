@@ -1,5 +1,4 @@
-// import 'package:json_serializable/json_serializable.dart';
-// import 'package:analyzer/dart/analysis/analysis_context.dart';
+
 import 'package:json_annotation/json_annotation.dart';
 part 'data_models.g.dart';
 
