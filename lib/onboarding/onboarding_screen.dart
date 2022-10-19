@@ -22,7 +22,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         borderRadius: BorderRadius.all(
           Radius.circular(50),
         ),
-        color:  Colors.white,
+        color: Colors.white,
       ),
       margin: const EdgeInsets.only(right: 5),
       height: 10,
@@ -36,7 +36,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     SizeConfig().init(context);
     double width = SizeConfig.screenW!;
     double height = SizeConfig.screenH!;
-
 
     return Scaffold(
       backgroundColor: colors[_currentPage],
@@ -76,15 +75,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           SizedBox(
                             height: 15,
                           ),
-                          // Text(
-                          //   contents[i].desc,
-                          //   style: TextStyle(
-                          //     fontFamily: "Mulish",
-                          //     fontWeight: FontWeight.w300,
-                          //     fontSize: (width <= 550) ? 17 : 25,
-                          //   ),
-                          //   textAlign: TextAlign.center,
-                          // )
                         ],
                       ),
                     ),
@@ -127,7 +117,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               textStyle:
                                   TextStyle(fontSize: (width <= 550) ? 13 : 17),
                             ),
-                            child: Text("START",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
+                            child: Text(
+                              "START",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20),
+                            ),
                           ),
                         )
                       : Padding(
@@ -152,7 +148,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 ),
                               ),
                               ElevatedButton(
-                                
                                 onPressed: () {
                                   _controller.nextPage(
                                     duration: Duration(milliseconds: 200),
@@ -160,8 +155,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                   );
                                 },
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor : Color.fromARGB(255, 0, 75, 69),
-                                  shape:  RoundedRectangleBorder(
+                                  backgroundColor:
+                                      Color.fromARGB(255, 0, 75, 69),
+                                  shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(50),
                                   ),
                                   elevation: 0,
@@ -173,7 +169,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                   textStyle: TextStyle(
                                       fontSize: (width <= 550) ? 13 : 17),
                                 ),
-                                child: Text("NEXT",style: TextStyle(fontWeight: FontWeight.bold),),
+                                child: Text(
+                                  "NEXT",
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
                               ),
                             ],
                           ),

@@ -5,6 +5,8 @@ import '../shared/widgets/loader.dart';
 import 'about.dart';
 import 'load_the_practice.dart';
 
+// TODO: navigation glitches, back button glitches
+
 // ignore: must_be_immutable
 class CheckAnswer extends StatelessWidget {
   CheckAnswer(
@@ -23,6 +25,7 @@ class CheckAnswer extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: Builder(
+          // TODO: why use a builder?
           builder: (BuildContext context) {
             return IconButton(
               icon: Icon(Icons.home),
@@ -42,9 +45,8 @@ class CheckAnswer extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            icon: Image.asset(
-              'assets/gammal tech.png',
-            ),
+            // TODO: save this icon button and reuse it in other AppBars
+            icon: Image.asset('assets/gammal tech.png'),
             onPressed: () {
               Navigator.push(context,
                       MaterialPageRoute(builder: (context) => AboutScreen()))
@@ -68,6 +70,7 @@ class CheckAnswer extends StatelessWidget {
                 height: 20,
               ),
               Image.asset(
+                // TODO: i love gifs, but the sad (wrong answer) ones might come off to harsh (instead of friendly)
                 type == 1
                     ? check == false
                         ? 'assets/easy_sad.gif'
