@@ -8,14 +8,16 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // TODO: build body too big, separate it into smaller pieces
     return Scaffold(
       appBar: AppBar(
-        title: Text('home'),
+        title: Text('home'), // TODO: capitalization or just remove it
+        // TODO: when you go here from home button, push replacement, because you can go back to middle of challenge
         actions: [
           IconButton(
-            icon: Image.asset(
-                'assets/gammal tech.png',),
-            onPressed: () { 
+            // TODO: icon button misleading. looks like just logo, not the About screen
+            icon: Image.asset('assets/gammal tech.png'),
+            onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => AboutScreen()));
             },
@@ -35,7 +37,8 @@ class HomeScreen extends StatelessWidget {
                 height: 40,
               ),
               Text(
-                'Let The Challenge\n Begin !',
+                // TODO: extract to new widgets or methods
+                'Let the\nChallenge Begin!',
                 textDirection: TextDirection.ltr,
                 style: TextStyle(
                     wordSpacing: 1.5,
@@ -57,6 +60,7 @@ class HomeScreen extends StatelessWidget {
                 height: 40,
               ),
               InkWell(
+                // TODO: extract to new widgets or methods
                 onTap: () {
                   Navigator.push(
                       context,
@@ -67,6 +71,7 @@ class HomeScreen extends StatelessWidget {
                               )));
                 },
                 child: Container(
+                  // TODO: extract to new widgets or methods
                   height: 60,
                   width: MediaQuery.of(context).size.width / 1.5,
                   decoration: BoxDecoration(
@@ -90,6 +95,8 @@ class HomeScreen extends StatelessWidget {
                 height: 40,
               ),
               InkWell(
+                // TODO: use normal ElevatedButtons
+                // TODO: extract to new widgets or methods
                 onTap: () {
                   Navigator.push(
                       context,
@@ -109,6 +116,7 @@ class HomeScreen extends StatelessWidget {
                     child: Text(
                       '15 Seconds Challenge',
                       style: TextStyle(
+                          // TODO: save text style and reuse instead of copy pasting
                           wordSpacing: 1.5,
                           height: 1.5,
                           fontSize: 20,

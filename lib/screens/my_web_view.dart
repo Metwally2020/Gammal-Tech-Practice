@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'dart:io';
 
+// TODO: is there a good reason for the web view?
 class MyWebView extends StatefulWidget {
   final String title;
   final String website;
@@ -31,7 +32,6 @@ class _MyWebViewState extends State<MyWebView> {
             color: Colors.white,
           ),
         ),
-      
         body: SafeArea(
           child: WebView(
             initialUrl: widget.website,

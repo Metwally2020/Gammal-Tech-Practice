@@ -7,24 +7,25 @@ class AuthService {
 
   Future<void> anonLogin({context}) async {
     try {
-      await FirebaseAuth.instance.signInAnonymously().
-      then((value) {
+      await FirebaseAuth.instance.signInAnonymously().then((value) {
         FirestoreService().addUser(userId: value.user!.uid);
         return Navigator.of(context).pushReplacementNamed('/home');
-      }
-      );
-      print("Signed in with temporary account.");
+      });
+      // print("Signed in with temporary account.");
     } on FirebaseAuthException catch (e) {
       switch (e.code) {
         case "operation-not-allowed":
-          print("Anonymous auth hasn't been enabled for this project.");
+          // print("Anonymous auth hasn't been enabled for this project.");
+          // TODO: throw error instead of print and/or display error message/dialog to user
           break;
         default:
-          print("Unknown error.");
+        // print("Unknown error.");
+        // TODO: throw error instead of print and/or display error message/dialog to user
       }
     }
   }
-  Future<void> signOut()async{
+
+  Future<void> signOut() async {
     await FirebaseAuth.instance.signOut();
   }
 }

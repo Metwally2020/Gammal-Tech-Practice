@@ -12,8 +12,10 @@ class AboutScreen extends StatefulWidget {
 }
 
 class _AboutScreenState extends State<AboutScreen> {
+  // TODO: use internationalization https://docs.flutter.dev/development/accessibility-and-localization/internationalization
   var lang = 'en';
   late YoutubePlayerController youTubeController;
+
   @override
   void deactivate() {
     youTubeController.pause();
@@ -31,9 +33,7 @@ class _AboutScreenState extends State<AboutScreen> {
     const url = 'https://youtu.be/iCTEYPwvhCQ';
     youTubeController = YoutubePlayerController(
         initialVideoId: YoutubePlayer.convertUrlToId(url)!,
-        flags:YoutubePlayerFlags(
-          autoPlay: false
-        ) );
+        flags: YoutubePlayerFlags(autoPlay: false));
     super.initState();
   }
 
@@ -62,7 +62,7 @@ class _AboutScreenState extends State<AboutScreen> {
                     ),
                   )
                 : Padding(
-                    padding: const EdgeInsets.only(right: 12.0,top: 3),
+                    padding: const EdgeInsets.only(right: 12.0, top: 3),
                     child: TextButton(
                       onPressed: () {
                         lang = 'en';
@@ -85,8 +85,6 @@ class _AboutScreenState extends State<AboutScreen> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-               
-                
                 Text(
                   'Gammal Tech \nFinal Exam Practice',
                   style: TextStyle(
@@ -97,16 +95,13 @@ class _AboutScreenState extends State<AboutScreen> {
                       color: Colors.white),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 20,),
+                SizedBox(height: 20),
                 player,
-                Divider(
-                  color: Colors.white,
-                ),
-                SizedBox(
-                  height: 30,
-                ),
+                Divider(color: Colors.white),
+                SizedBox(height: 30),
                 lang == 'en'
                     ? Text(
+                        // TODO: extract text somewher else, and review language
                         'www.gammal.tech is the largest website in the middle east and this App is going to help you practice for Gammal Tech final exam',
                         textDirection: TextDirection.ltr,
                         style: TextStyle(
@@ -135,6 +130,7 @@ class _AboutScreenState extends State<AboutScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
+                            // TODO: why use a webview? why not just open the url?
                             builder: (context) => MyWebView(
                                 title: 'Gammal Tech',
                                 website: 'https://www.gammal.tech')));
@@ -149,6 +145,7 @@ class _AboutScreenState extends State<AboutScreen> {
                       child: Text(
                         'Visit Gammal Tech',
                         style: TextStyle(
+                            // TODO: it seems that this text style is reused, you can save it in variable
                             wordSpacing: 1.5,
                             height: 1.5,
                             fontSize: 18,
@@ -167,3 +164,6 @@ class _AboutScreenState extends State<AboutScreen> {
     );
   }
 }
+
+// TODO: thos large number of closing brackets and parentheses makes code harder to read
+// I count 12 here

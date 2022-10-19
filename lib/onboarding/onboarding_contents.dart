@@ -1,7 +1,7 @@
 class OnboardingContents {
   final String title;
   final String image;
-  final String desc;
+  final String desc; // TODO: where is this field used? if not used, delete it
 
   OnboardingContents(
       {required this.title, required this.image, required this.desc});
@@ -9,8 +9,10 @@ class OnboardingContents {
 
 List<OnboardingContents> contents = [
   OnboardingContents(
-    title: "Track Your progress and get the result",
-    image: "assets/image1.png",
+    title:
+        "Track Your progress and get the result", // TODO: language fixes. capitalization. which result?
+    image:
+        "assets/image1.png", // TODO: the images look very common, but it is not a big problem
     desc: "Remember to keep track of your professional accomplishments.",
   ),
   OnboardingContents(

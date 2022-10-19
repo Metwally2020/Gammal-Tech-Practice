@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class Loader extends StatelessWidget {
   const Loader({super.key});
 
@@ -10,15 +9,13 @@ class Loader extends StatelessWidget {
       width: 100,
       height: 100,
       child: CircularProgressIndicator(
-        color: Colors.white,
+        color: Colors.white, // TODO: delete code instead of commenting it
         // backgroundColor: Color.fromARGB(255, 197, 222, 219),
         strokeWidth: 10,
-        
-        ),
+      ),
     );
   }
 }
-
 
 class LoadingScreen extends StatelessWidget {
   const LoadingScreen({super.key});
@@ -26,10 +23,7 @@ class LoadingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(),
-      body:  Container(
-        color: Colors.teal,
-        child: const Center(child: Loader()))
-    );
+        body: Container(
+            color: Colors.teal, child: const Center(child: Loader())));
   }
 }
