@@ -4,8 +4,6 @@ A new Flutter project.
 
 ## Getting Started
 
-www.gammal.tech is the best online website that teaches programming in Arabic, and after each student finishes his learning journey, he can take the final exam of Gammal Tech in witch he would have to solve various problems, the first two stages of the exam will test you at the syntax of the C and C++ programming language, So this app was created to help you practice before taking the exam 😉.
-
 the first stage of the application allows you to take challenges on syntax errors in C and C++ programming languages.
 There are two types of challenges 
 1) the 10 seconds challenge in which there is an easy obvious mistake and you have to notice it .✌
